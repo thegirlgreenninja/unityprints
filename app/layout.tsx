@@ -20,10 +20,8 @@ export default function RootLayout({
         <nav className="fixed w-full z-50 top-0 border-b border-white/10 bg-zinc-950/60 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <Link href="/" className="font-bold text-2xl tracking-tighter flex items-center gap-3 hover:opacity-80 transition">
-              <div className="w-10 h-10 bg-white text-black rounded-xl flex items-center justify-center font-black text-xl shadow-[0_0_15px_rgba(255,255,255,0.3)]">
-                UP
-              </div>
-              UnityPrints
+              <img src="/logo.png" alt="UnityPrints Logo" className="w-10 h-10 object-contain" />
+            UnityPrints
             </Link>
             
             <div className="hidden md:flex gap-8 text-sm font-semibold text-zinc-400">
