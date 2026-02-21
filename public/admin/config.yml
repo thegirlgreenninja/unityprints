@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: thegirlgreenninja
+  repo: thegirlgreenninja/unityprints
   branch: main
 
 media_folder: "public/images/uploads"
