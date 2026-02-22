@@ -1,6 +1,6 @@
+local_backend: true
 backend:
-  name: github
-  repo: thegirlgreenninja/unityprints
+  name: git-gateway
   branch: main
 
 media_folder: "public/images/uploads"
