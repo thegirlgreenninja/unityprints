@@ -1,79 +1,78 @@
-
-import Link from 'next/link';
-import { Tv, Palette, Wrench, Scissors, Building2, Printer } from 'lucide-react';
-
-const lanes = [
-  { id: 'twitch', title: 'Twitch & Content', desc: 'Live streams, clips, and creation', icon: Tv, color: 'bg-violet-600', shadow: 'hover:shadow-violet-500/40', span: 'md:col-span-2 md:row-span-2' },
-  { id: 'art', title: 'Art & Dance', desc: 'Drawings, paintings & performance', icon: Palette, color: 'bg-rose-500', shadow: 'hover:shadow-rose-500/40', span: 'md:col-span-1 md:row-span-1' },
-  { id: 'tech', title: 'Mechanical & Tech', desc: 'Project logs & builds', icon: Wrench, color: 'bg-orange-500', shadow: 'hover:shadow-orange-500/40', span: 'md:col-span-1 md:row-span-1' },
-  { id: 'sewing', title: 'Sewing Studio', desc: 'Patterns & commissions', icon: Scissors, color: 'bg-emerald-500', shadow: 'hover:shadow-emerald-500/40', span: 'md:col-span-1 md:row-span-1' },
-  { id: 'bim', title: 'BIM / CAD', desc: 'Resources & consulting', icon: Building2, color: 'bg-blue-600', shadow: 'hover:shadow-blue-500/40', span: 'md:col-span-2 md:row-span-1' },
-  { id: 'printing', title: '3D Printing', desc: 'Prints, files, and time-lapses', icon: Printer, color: 'bg-teal-500', shadow: 'hover:shadow-teal-500/40', span: 'md:col-span-1 md:row-span-1' },
-];
+import Link from 'next/link'
+import { MonitorPlay, Palette, Cpu, Scissors, Hexagon, Cuboid } from 'lucide-react'
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative selection:bg-teal-500 selection:text-white overflow-hidden">
+    <main className="min-h-screen flex flex-col items-center justify-center p-6 bg-[#0b0c10]">
       
-      {/* Background Visual Effects */}
-      <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff0a_1px,transparent_1px),linear-gradient(to_bottom,#ffffff0a_1px,transparent_1px)] bg-[size:24px_24px]"></div>
-      <div className="absolute left-0 right-0 top-0 -z-10 m-auto h-[310px] w-[310px] rounded-full bg-violet-500 opacity-20 blur-[100px]"></div>
-      <div className="absolute right-0 top-1/4 -z-10 h-[300px] w-[300px] rounded-full bg-teal-500 opacity-20 blur-[120px]"></div>
-
-      {/* Hero Section */}
-      <section className="relative max-w-7xl mx-auto px-6 pt-32 pb-24 text-center md:text-left z-10">
-        <div className="inline-flex items-center px-4 py-2 mb-8 border border-white/10 rounded-full bg-white/5 backdrop-blur-md text-sm text-zinc-300 shadow-xl">
-          <span className="w-2.5 h-2.5 rounded-full bg-teal-400 inline-block mr-3 animate-pulse shadow-[0_0_10px_#2dd4bf]"></span>
-          The UnityPrints Family Hub
-        </div>
-        
-        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-8 leading-[1.1]">
-          We Build.<br />
-          <span className="text-zinc-600">We Create.</span><br />
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-400 to-blue-500 drop-shadow-sm">We Print.</span>
+      {/* Massive Neon Hero Section */}
+      <div className="text-center mt-20 mb-24 max-w-4xl">
+        <h1 className="text-6xl md:text-8xl font-black tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-pink-500 to-cyan-500 drop-shadow-[0_0_15px_rgba(236,72,153,0.4)]">
+          CREATE. <br/> PRINT. <br/> STREAM.
         </h1>
-        
-        <p className="text-xl text-zinc-400 max-w-2xl mb-12 leading-relaxed">
-          Six creative lanes, one family. From 3D printing to BIM consulting, sewing to streaming — explore what we make.
+        <p className="text-xl md:text-2xl text-gray-400 font-medium mb-10 max-w-2xl mx-auto">
+          Six creative lanes. One family hub. Welcome to the digital workshop of UnityPrints.
         </p>
-        
-        <div className="flex flex-col sm:flex-row gap-5 justify-center md:justify-start">
-          <Link href="/projects" className="bg-white text-black px-8 py-4 rounded-full font-bold hover:bg-zinc-200 hover:scale-105 transition-all shadow-[0_0_20px_rgba(255,255,255,0.3)] text-center">
-            Explore Projects →
-          </Link>
-          <Link href="/shop" className="bg-zinc-900/50 backdrop-blur-md border border-white/10 text-white px-8 py-4 rounded-full font-bold hover:bg-zinc-800 transition-all text-center">
-            Shop & Support
-          </Link>
-        </div>
-      </section>
+      </div>
 
-      {/* The Bento Box Grid */}
-      <section className="relative max-w-7xl mx-auto px-6 pb-32 z-10">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[250px]">
-          {lanes.map((lane) => {
-            const Icon = lane.icon;
-            return (
-              <Link 
-                key={lane.id} 
-                href={`/lanes/${lane.id}`}
-                className={`group relative overflow-hidden rounded-3xl p-8 flex flex-col justify-end transition-all duration-300 hover:-translate-y-2 shadow-xl ${lane.color} ${lane.shadow} ${lane.span} border border-white/20`}
-              >
-                {/* Dark gradient fade from bottom so text is always readable */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity"></div>
-                
-                {/* Glassmorphism Icon Box */}
-                <div className="relative z-10">
-                  <div className="bg-white/20 backdrop-blur-xl border border-white/30 w-14 h-14 rounded-2xl flex items-center justify-center mb-5 transform transition-transform group-hover:scale-110 group-hover:rotate-6 shadow-lg">
-                    <Icon size={28} className="text-white drop-shadow-md" />
-                  </div>
-                  <h3 className="text-3xl font-black text-white mb-2 drop-shadow-md tracking-tight">{lane.title}</h3>
-                  <p className="text-white/80 font-medium text-lg leading-snug">{lane.desc}</p>
-                </div>
-              </Link>
-            )
-          })}
-        </div>
-      </section>
+      {/* Glowing Neon Hover Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full mb-20">
+        
+        {/* Card 1: 3D Printing (Neon Lime) */}
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-lime-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-lime-400/30 group-hover:border-lime-400 group-hover:shadow-[0_0_15px_rgba(132,204,22,0.5)] transition-all">
+            <Cuboid className="text-lime-400" size={28} />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-3">3D Printing</h2>
+          <p className="text-gray-400">Layer by layer. Bringing digital models into the physical world.</p>
+        </Link>
+
+        {/* Card 2: Art (Neon Pink) */}
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-pink-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-pink-500/30 group-hover:border-pink-500 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.5)] transition-all">
+            <Palette className="text-pink-500" size={28} />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-3">Art</h2>
+          <p className="text-gray-400">Digital and traditional canvas. Painting our imagination.</p>
+        </Link>
+
+        {/* Card 3: Twitch (Neon Purple) */}
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-purple-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-purple-500/30 group-hover:border-purple-500 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all">
+            <MonitorPlay className="text-purple-500" size={28} />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-3">Twitch</h2>
+          <p className="text-gray-400">Live streaming our gaming, creation process, and chaos.</p>
+        </Link>
+
+        {/* Card 4: Tech (Neon Cyan) */}
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] transition-all">
+            <Cpu className="text-cyan-400" size={28} />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-3">Tech & Mech</h2>
+          <p className="text-gray-400">Building, fixing, and coding the engines that power us.</p>
+        </Link>
+
+        {/* Card 5: Sewing (Neon Rose) */}
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-rose-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,113,133,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-rose-400/30 group-hover:border-rose-400 group-hover:shadow-[0_0_15px_rgba(251,113,133,0.5)] transition-all">
+            <Scissors className="text-rose-400" size={28} />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-3">Sewing</h2>
+          <p className="text-gray-400">Threads and fabrics. Crafting custom apparel and cosplay.</p>
+        </Link>
+
+        {/* Card 6: BIM (Neon Orange) */}
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-orange-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-orange-500/30 group-hover:border-orange-500 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition-all">
+            <Hexagon className="text-orange-500" size={28} />
+          </div>
+          <h2 className="text-2xl font-bold text-white mb-3">BIM Design</h2>
+          <p className="text-gray-400">Architectural modeling and building information management.</p>
+        </Link>
+        
+      </div>
     </main>
-  );
+  )
 }
