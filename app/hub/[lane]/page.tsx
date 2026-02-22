@@ -1,12 +1,11 @@
 import Link from 'next/link'
 import { ArrowLeft } from 'lucide-react'
 
-// We added "async" here and changed how it expects the params!
-export default async function LanePage({ params }: { params: Promise<{ lane: string }> }) {
+// We changed Promise<{ lane: string }> to just { lane: string }
+export default async function LanePage(props: { params: Promise<{ lane: string }> }) {
   
-  // This forces the engine to wait and properly read the URL before building the page
-  const resolvedParams = await params;
-  const rawLane = resolvedParams.lane || 'project';
+  const params = await props.params;
+  const rawLane = params.lane || 'project';
   const displayLane = rawLane.replace('-', ' ').toUpperCase();
 
   return (
@@ -28,7 +27,7 @@ export default async function LanePage({ params }: { params: Promise<{ lane: str
           Welcome to the dedicated workshop space for all our {displayLane.toLowerCase()} projects.
         </p>
 
-        {/* Placeholder for where your CMS projects will eventually go */}
+        {/* Project Grid Placeholder */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 opacity-60">
           <div className="bg-[#1a1c23] border border-white/5 p-12 rounded-2xl flex flex-col items-center justify-center text-center">
             <div className="w-12 h-12 rounded-full border border-white/10 animate-pulse mb-4"></div>
