@@ -27,21 +27,28 @@ export default function RootLayout({
         <nav className="fixed w-full z-40 top-1 border-b border-white/5 bg-[#0b0c10]/80 backdrop-blur-xl">
           <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
             <Link href="/" className="font-bold text-2xl tracking-tighter flex items-center gap-3 hover:opacity-80 transition group">
-              {/* Logo with a subtle pink glow */}
               <img src="/logo.png" alt="UnityPrints Logo" className="w-12 h-12 object-contain drop-shadow-[0_0_8px_rgba(236,72,153,0.4)]" />
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">UnityPrints</span>
             </Link>
             
-            <div className="hidden md:flex gap-8 text-sm font-semibold text-zinc-400">
-              {/* Links hover in colors matching the logo swoosh */}
-              <Link href="/" className="hover:text-pink-400 transition">Home</Link>
-              <Link href="/projects" className="hover:text-purple-400 transition">Projects</Link>
-              <Link href="/shop" className="hover:text-cyan-400 transition">Shop & Support</Link>
+            {/* NEW: Glass Pill Buttons for Navigation */}
+            <div className="hidden md:flex gap-4 text-sm font-bold">
+              <Link href="/" className="px-5 py-2 rounded-full bg-white/5 border border-white/5 hover:border-pink-500 hover:text-pink-400 hover:bg-pink-500/10 hover:shadow-[0_0_15px_rgba(236,72,153,0.3)] hover:-translate-y-0.5 transition-all text-gray-300">
+                Home
+              </Link>
+              <Link href="/projects" className="px-5 py-2 rounded-full bg-white/5 border border-white/5 hover:border-purple-500 hover:text-purple-400 hover:bg-purple-500/10 hover:shadow-[0_0_15px_rgba(168,85,247,0.3)] hover:-translate-y-0.5 transition-all text-gray-300">
+                Projects
+              </Link>
+              <Link href="/shop" className="px-5 py-2 rounded-full bg-white/5 border border-white/5 hover:border-cyan-400 hover:text-cyan-400 hover:bg-cyan-400/10 hover:shadow-[0_0_15px_rgba(34,211,238,0.3)] hover:-translate-y-0.5 transition-all text-gray-300">
+                Shop & Support
+              </Link>
             </div>
 
-            {/* Login button styled to match the logo's neon green accent */}
-            <a href="/admin/index.html" className="text-sm font-bold bg-[#1a1c23] hover:bg-[#252830] text-lime-400 border border-lime-500/30 px-5 py-2.5 rounded-full transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(132,204,22,0.1)] hover:shadow-[0_0_20px_rgba(132,204,22,0.25)]">
-              <LayoutDashboard size={16} /> Creator Login
+            {/* NEW: Extravagant Glowing Creator Login Button */}
+            <a href="/admin/index.html" className="group relative px-6 py-2.5 rounded-full bg-gradient-to-r from-lime-500/10 to-emerald-500/10 border border-lime-500/50 text-lime-400 font-bold text-sm flex items-center gap-2 overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-[0_0_25px_rgba(132,204,22,0.4)] hover:border-lime-400">
+              <div className="absolute inset-0 bg-gradient-to-r from-lime-400 to-emerald-400 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+              <LayoutDashboard size={16} className="relative z-10 group-hover:animate-pulse" /> 
+              <span className="relative z-10 text-white group-hover:text-lime-50 transition-colors">Creator Login</span>
             </a>
           </div>
         </nav>
