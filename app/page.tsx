@@ -15,12 +15,12 @@ export default function Home() {
         </p>
       </div>
 
-      {/* Glowing Neon Hover Grid */}
+      {/* Glowing Neon Hover Grid - NOW WITH PERMANENT COLORED BORDERS */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl w-full mb-20">
         
         {/* Card 1: 3D Printing (Neon Lime) */}
-        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-lime-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] hover:-translate-y-2">
-          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-lime-400/30 group-hover:border-lime-400 group-hover:shadow-[0_0_15px_rgba(132,204,22,0.5)] transition-all">
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-lime-400/30 hover:border-lime-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(132,204,22,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-lime-400/50 group-hover:border-lime-400 group-hover:shadow-[0_0_15px_rgba(132,204,22,0.5)] transition-all">
             <Cuboid className="text-lime-400" size={28} />
           </div>
           <h2 className="text-2xl font-bold text-white mb-3">3D Printing</h2>
@@ -28,8 +28,8 @@ export default function Home() {
         </Link>
 
         {/* Card 2: Art (Neon Pink) */}
-        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-pink-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] hover:-translate-y-2">
-          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-pink-500/30 group-hover:border-pink-500 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.5)] transition-all">
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-pink-500/30 hover:border-pink-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-pink-500/50 group-hover:border-pink-500 group-hover:shadow-[0_0_15px_rgba(236,72,153,0.5)] transition-all">
             <Palette className="text-pink-500" size={28} />
           </div>
           <h2 className="text-2xl font-bold text-white mb-3">Art</h2>
@@ -37,8 +37,8 @@ export default function Home() {
         </Link>
 
         {/* Card 3: Twitch (Neon Purple) */}
-        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-purple-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-2">
-          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-purple-500/30 group-hover:border-purple-500 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all">
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-purple-500/30 hover:border-purple-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-purple-500/50 group-hover:border-purple-500 group-hover:shadow-[0_0_15px_rgba(168,85,247,0.5)] transition-all">
             <MonitorPlay className="text-purple-500" size={28} />
           </div>
           <h2 className="text-2xl font-bold text-white mb-3">Twitch</h2>
@@ -46,8 +46,8 @@ export default function Home() {
         </Link>
 
         {/* Card 4: Tech (Neon Cyan) */}
-        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:-translate-y-2">
-          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-cyan-400/30 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] transition-all">
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-cyan-400/30 hover:border-cyan-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(34,211,238,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-cyan-400/50 group-hover:border-cyan-400 group-hover:shadow-[0_0_15px_rgba(34,211,238,0.5)] transition-all">
             <Cpu className="text-cyan-400" size={28} />
           </div>
           <h2 className="text-2xl font-bold text-white mb-3">Tech & Mech</h2>
@@ -55,8 +55,8 @@ export default function Home() {
         </Link>
 
         {/* Card 5: Sewing (Neon Rose) */}
-        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-rose-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,113,133,0.2)] hover:-translate-y-2">
-          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-rose-400/30 group-hover:border-rose-400 group-hover:shadow-[0_0_15px_rgba(251,113,133,0.5)] transition-all">
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-rose-400/30 hover:border-rose-400 transition-all duration-300 hover:shadow-[0_0_30px_rgba(251,113,133,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-rose-400/50 group-hover:border-rose-400 group-hover:shadow-[0_0_15px_rgba(251,113,133,0.5)] transition-all">
             <Scissors className="text-rose-400" size={28} />
           </div>
           <h2 className="text-2xl font-bold text-white mb-3">Sewing</h2>
@@ -64,8 +64,8 @@ export default function Home() {
         </Link>
 
         {/* Card 6: BIM (Neon Orange) */}
-        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-white/5 hover:border-orange-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] hover:-translate-y-2">
-          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-orange-500/30 group-hover:border-orange-500 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition-all">
+        <Link href="/projects" className="group relative bg-[#1a1c23] p-8 rounded-2xl border border-orange-500/30 hover:border-orange-500 transition-all duration-300 hover:shadow-[0_0_30px_rgba(249,115,22,0.2)] hover:-translate-y-2">
+          <div className="w-14 h-14 bg-[#0b0c10] rounded-xl flex items-center justify-center mb-6 border border-orange-500/50 group-hover:border-orange-500 group-hover:shadow-[0_0_15px_rgba(249,115,22,0.5)] transition-all">
             <Hexagon className="text-orange-500" size={28} />
           </div>
           <h2 className="text-2xl font-bold text-white mb-3">BIM Design</h2>
